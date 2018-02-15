@@ -5,6 +5,7 @@ using UnityEngine;
 public class Snapping : MonoBehaviour {
     public Collider coll;
 
+    private bool isColliding = false;
 	// Use this for initialization
 	void Start () {
         coll = GetComponent<Collider>();
@@ -15,8 +16,15 @@ public class Snapping : MonoBehaviour {
 		
 	}
 
+    public void disableIfColliding()
+    {
+        if (isColliding)
+            coll.enabled = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
+        isColliding = true;
         Snapping otherAs = other.GetComponent<Snapping>();
         if (otherAs == null)
             return;
@@ -28,6 +36,7 @@ public class Snapping : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
+        isColliding = false;
         Snapping otherAs = other.GetComponent<Snapping>();
         if (otherAs == null)
             return;
@@ -35,25 +44,5 @@ public class Snapping : MonoBehaviour {
         ModularComponent parentScript = transform.parent.GetComponent<ModularComponent>();
 
         parentScript.onChildTriggerExit(this);
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        Snapping otherAs = other.GetComponent<Snapping>();
-        if (otherAs == null)
-            return;
-        
-        ModularComponent parentScript = transform.parent.GetComponent<ModularComponent>();
-        if(!parentScript.isActive)
-        {
-            ModularComponent otherparent = other.transform.parent.GetComponent<ModularComponent>();
-            if (!otherparent.isActive)
-            {
-                coll.enabled = false;
-                otherAs.coll.enabled = false;
-                parentScript.activeSnap = -1;
-                otherparent.activeSnap = -1;
-            }
-        }
     }
 }

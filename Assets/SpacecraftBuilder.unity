@@ -293,7 +293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d46d5e725697594ab5326bedec66c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPanned: 0
 --- !u!114 &778079928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,15 +331,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4900270334376514, guid: be371208dd156574093ce372b30c7a41, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4900270334376514, guid: be371208dd156574093ce372b30c7a41, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4900270334376514, guid: be371208dd156574093ce372b30c7a41, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4900270334376514, guid: be371208dd156574093ce372b30c7a41, type: 2}
       propertyPath: m_LocalRotation.w
@@ -358,6 +357,14 @@ Prefab:
     - target: {fileID: 54473886237837350, guid: be371208dd156574093ce372b30c7a41,
         type: 2}
       propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900270334376514, guid: be371208dd156574093ce372b30c7a41, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900270334376514, guid: be371208dd156574093ce372b30c7a41, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -413,7 +420,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4900270334376514, guid: be371208dd156574093ce372b30c7a41, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4.03
+      value: 5.94
       objectReference: {fileID: 0}
     - target: {fileID: 4900270334376514, guid: be371208dd156574093ce372b30c7a41, type: 2}
       propertyPath: m_LocalPosition.y
@@ -462,6 +469,23 @@ Prefab:
       propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4900270334376514, guid: be371208dd156574093ce372b30c7a41, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900270334376514, guid: be371208dd156574093ce372b30c7a41, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900270334376514, guid: be371208dd156574093ce372b30c7a41, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114828162100264692, guid: be371208dd156574093ce372b30c7a41,
+        type: 2}
+      propertyPath: snapAngle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be371208dd156574093ce372b30c7a41, type: 2}
   m_IsPrefabParent: 0
@@ -492,7 +516,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff74140453ee7cb499c2d265485f6964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPanned: 0
 --- !u!4 &1804616560
 Transform:
   m_ObjectHideFlags: 0
